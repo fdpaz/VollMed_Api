@@ -1,4 +1,4 @@
-package med.voll.api.direccion;
+package med.voll.api.domain.direccion;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
@@ -24,5 +24,13 @@ public class Direccion {
         this.complemento = direccion.complemento();
         this.ciudad = direccion.ciudad();
 
+    }
+    public Direccion actualizarDatos(DatosDireccion direccion) {
+        this.calle = direccion.calle();
+        this.numero = direccion.numero();
+        this.distrito = direccion.distrito();
+        this.complemento = direccion.complemento();
+        this.ciudad = direccion.ciudad();
+        return this;
     }
 }
